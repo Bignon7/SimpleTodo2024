@@ -1,5 +1,6 @@
 let addInput = document.getElementById("add_input");
 let listContainer = document.getElementById("list_container");
+let containerBox = document.getElementById("container_box");
 
 function addTask() {
   if (addInput.value === "") {
@@ -21,6 +22,7 @@ function addTask() {
     li.appendChild(p);
     li.appendChild(hr);
     listContainer.appendChild(li);
+    containerBox.scrollTop = containerBox.scrollHeight;
   }
   addInput.value = "";
   saveTask();
@@ -36,7 +38,12 @@ listContainer.addEventListener("click", (e) => {
   ) {
     const listItem = e.target.closest("li");
     if (listItem) {
-      listItem.remove();
+      let isConfirmed = confirm(
+        "Êtes-vous sûr de vouloir supprimer cette tâche?"
+      );
+      if (isConfirmed) {
+        listItem.remove();
+      }
       saveTask();
     }
   }
