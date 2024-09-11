@@ -133,7 +133,7 @@ p.row {
   height: 24px;
   width: 24px;
   border-radius: 50%;
-  background-image: url("/assets/unchek2.png");
+  background-image: url("assets/unchek2.png");
   background-size: cover;
   background-position: center;
 }
@@ -144,7 +144,7 @@ p.row {
 }
 
 .checked span.textLine::before {
-  background-image: url("/assets/purple_check2.png");
+  background-image: url("assets/purple_check2.png");
 }
 
 /* TaskRow */
