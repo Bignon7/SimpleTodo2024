@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Playpen Sans", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #ebeae2, #9d41c7);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 100%;
+  max-width: 540px;
+}
+
+/* InputBox */
+.container {
+  display: flex;
+  justify-content: space-between;
+  background: rgb(255, 255, 255);
+  border-radius: 20px;
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  font-family: "Playpen Sans";
+  box-shadow: 2px 2px 2px 1px rgba(83, 82, 82, 0.2);
+}
+
+.container input {
+  padding: 10px;
+  border: 2px solid rgba(148, 0, 211, 0.692);
+  outline: none;
+  margin: 15px;
+  font-size: large;
+}
+
+.container button {
+  background: #7c54eb;
+  border: none;
+  margin: 15px;
+  padding: 15px;
+  color: white;
+  cursor: pointer;
+}
+
+.container button:hover {
+  background: #9476e7;
+}
+/* InputBox */
+
+/* TasksBox */
+.containerBox {
+  overflow-y: auto;
+  display: flex;
+  max-height: 70vh;
+  flex-direction: column;
+  justify-content: space-between;
+  background: rgb(255, 255, 255);
+  border-radius: 20px;
+  width: 100%;
+  display: flex;
+  padding: 15px;
+  font-family: "Playpen Sans";
+  box-shadow: 2px 2px 2px 1px rgba(83, 82, 82, 0.2);
+}
+
+.containerBox p.title {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.containerBox ul li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 10px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+
+/* TasksBox */
+
+/* TaskRow */
+hr {
+  border: 1px solid rgb(180, 179, 179);
+  border-radius: 5px;
+  margin: 5px;
+}
+
+p.row {
+  position: relative;
+  font-size: 1.1rem;
+  margin: 10px 25px;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0 15px auto;
+}
+
+.icon {
+  text-align: right;
+  color: gray;
+  cursor: pointer;
+}
+.icon:hover {
+  color: blueviolet;
+}
+.row span.textLine {
+  margin-left: 12px;
+}
+.row span.textLine::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: -20px;
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background-image: url("/assets/unchek2.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.checked span.textLine {
+  text-decoration: line-through;
+  color: grey;
+}
+
+.checked span.textLine::before {
+  background-image: url("/assets/purple_check2.png");
+}
+
+/* TaskRow */
+
+/* Responsivité */
+
+@media screen and (max-width: 540px) {
+  .box {
+    max-width: 400px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  body {
+    overflow: auto;
+    height: 50vh;
+  }
+}
+@media screen and (max-width: 400px) {
+  .box {
+    max-width: 300px;
+  }
+  body {
+    overflow: auto;
+    height: 50vh;
+  }
+}
+/* Responsivité */
