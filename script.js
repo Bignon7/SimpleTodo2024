@@ -4,7 +4,9 @@ let containerBox = document.getElementById("container_box");
 
 function addTask() {
   if (addInput.value === "") {
-    alert("Une tâche ne peut pas être vide voyons");
+    alert("Une tâche ne peut pas être vide!");
+  } else if (addInput.value.trim() === "") {
+    alert("Une tâche ne peut contenir uniquement des espaces vides!");
   } else {
     let li = document.createElement("li");
     let p = document.createElement("p");
