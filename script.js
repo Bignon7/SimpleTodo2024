@@ -11,7 +11,7 @@ function addTask() {
     let hr = document.createElement("hr");
     p.classList.add("row");
     let textSpan = document.createElement("span");
-    textSpan.innerHTML = addInput.value;
+    textSpan.innerText = addInput.value;
     textSpan.classList.add("textLine");
     let iconSpan = document.createElement("span");
     iconSpan.innerHTML = `<i class="fa-regular fa-trash-can"></i>`;
